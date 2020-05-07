@@ -16,3 +16,4 @@ Linked lists are among the simplest and most common data structures. They can be
 types, including lists, stacks, queues, associative arrays, and S-expressions, though it is not uncommon to implement those data 
 structures directly without using a linked list as the basis.
 ###################################################################################################################################
+The Simple implementation of linked list is given in code section .
