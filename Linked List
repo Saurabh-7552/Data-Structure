@@ -17,3 +17,12 @@ types, including lists, stacks, queues, associative arrays, and S-expressions, t
 structures directly without using a linked list as the basis.
 ###################################################################################################################################
 The Simple implementation of linked list is given in code section .
+/*
+ Time Complexity of each operation
+Insertion: O(1)
+Deletion:O(1)
+Searching: Worst:O(n) best:O(1)
+Finding Middle Element:O(n/2)
+Display:O(n)
+Reversing:O(n)
+*/
