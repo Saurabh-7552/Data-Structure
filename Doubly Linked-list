@@ -11,3 +11,10 @@ nodes other than first nodes) because there is no need to keep track of the prev
 list to find the previous node, so that its link can be modified.
 ######################################################################################################################################
 The basic Implemntation of doubly linked list is given in code section. 
+/*
+ Time Complexity for each operations
+ Insertion:O(1)
+ Deletion:O(1)
+ Display:O(n)
+ Reverse:O(n)
+ */
