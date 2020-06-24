@@ -4,6 +4,12 @@
 class My_LinkedList
 {
 	My_Node* head;
+         int get_myLength(My_Node* first)
+          {
+             if(first==NULL)
+              { return 0; }
+             return 1+get_myLength(first->next);
+          }
    public:
 	My_LinkedList()
 	{
@@ -49,11 +55,12 @@ class My_LinkedList
 		}
 		if (!found)                       //If data not found
 		{
-			return false;
+			return found;
 		}
 		else
 		{
 			back->next = first ->next;
+                        return found;
 		}
 	}
 	void display()
@@ -100,6 +107,55 @@ class My_LinkedList
 		head = temp;
 
 	}
+      int get_length()
+        {   My_Node* temp= head;
+           return get_myLength(temp);
+         }
+     void deleteNodeWithoutHead(My_Node* node)
+      {
+           *node = *(node->next);
+     }
+    int getNthFromLast(My_Node *head, int n)
+     {
+       // Your code here
+       My_Node* slow=head;
+       My_Node* fast=head;
+       for(int i=0;i<n-1;++i)
+       {   if(fast->next==NULL)
+            return -1;
+           fast=fast->next;
+       }
+       while(fast->next!=0)
+       {
+           slow=slow->next;
+           fast=fast->next;
+       }
+       return slow->data;
+      }
+    My_Node* rotate(My_Node* head, int k) {
+       My_Node* backOfSlow=head;
+       My_Node* slow=head;
+       My_Node* fast=head;
+       for(int i=0;i<k-1;++i)
+       {   
+           fast=fast->next;
+       }
+       while(fast->next!=0)
+       {   backOfSlow=slow;
+           slow=slow->next;
+           fast=fast->next;
+       }
+       backOfSlow->next=NULL;
+       My_Node* temp=slow;
+       while(temp->next!=NULL)
+       {
+           temp=temp->next;
+       }
+       temp->next=head;
+       head=slow;
+       return head;
+        }
+    
 
 };
 
