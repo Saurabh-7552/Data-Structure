@@ -107,14 +107,20 @@ class My_LinkedList
 		head = temp;
 
 	}
+
+
       int get_length()
         {   My_Node* temp= head;
            return get_myLength(temp);
          }
+
+
      void deleteNodeWithoutHead(My_Node* node)
       {
            *node = *(node->next);
      }
+
+
     int getNthFromLast(My_Node *head, int n)
      {
        // Your code here
@@ -132,7 +138,9 @@ class My_LinkedList
        }
        return slow->data;
       }
-    My_Node* rotate(My_Node* head, int k) {
+    
+
+   My_Node* rotate(My_Node* head, int k) {
        My_Node* backOfSlow=head;
        My_Node* slow=head;
        My_Node* fast=head;
@@ -155,6 +163,19 @@ class My_LinkedList
        head=slow;
        return head;
         }
+
+
+      boolean isloop()
+      {    Node * fast=head;*slow=head;                          ///// FloyD Method
+          while(fast->next!=NULL || fast!=NULL || slow!=NULL)
+           {
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow==fast)
+                return true;
+           }
+           return false;
+       }
     
 
 };
