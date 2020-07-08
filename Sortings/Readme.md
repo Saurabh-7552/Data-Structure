@@ -1,6 +1,8 @@
-## Sorting and Searching
+# Sorting and Searching
 
-# Bubble Sorting
+
+
+## Bubble Sorting
   Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list,
   compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list
   is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.
@@ -11,7 +13,7 @@
   Average performance	        O(n^{2}) comparisons,  O(n^{2}) swaps
   Worst-case space complexity	O(n) total,            O(1) auxiliary
 
-# Insertion Sorting
+## Insertion Sorting
  Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on
  large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides several advantages:
 
@@ -30,7 +32,7 @@
   Average performance	        О(n2) comparisons and swaps
   Worst-case space complexity	О(n) total, O(1) auxiliary
 
-# Selection Sorting
+## Selection Sorting
  In computer science, selection sort is an in-place comparison sorting algorithm. It has an O(n2) time complexity, which makes it inefficient
  on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity and has performance
  advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.
@@ -48,7 +50,7 @@ One thing which distinguishes selection sort from other sorting algorithms is th
  Average performance	        О(n2) comparisons, О(n) swaps
  Worst-case space complexity	O(1) auxiliary
 
-# Quick Sorting
+## Quick Sorting
   Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published
   in 1961, it is still a commonly used algorithm for sorting. When implemented well, it can be about two or three times faster than its main competitors, merge sort
   and heapsort.
@@ -67,7 +69,7 @@ One thing which distinguishes selection sort from other sorting algorithms is th
   Best-case performance	        O(n log n) (simple partition) or O(n) (three-way partition and equal keys)
   Average performance	        O(n log n)
   Worst-case space complexity	O(n) auxiliary (naive) O(log n) auxiliary (Sedgewick 1978)
-# Merge Sorting
+## Merge Sorting
  In computer science, merge sort (also commonly spelled mergesort) is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations
  produce a stable sort, which means that the order of equal elements is the same in the input and output. Merge sort is a divide and conquer algorithm that
  was invented by John von Neumann in 1945. A detailed description and analysis of bottom-up mergesort appeared in a report by Goldstine and von Neumann
@@ -83,7 +85,7 @@ One thing which distinguishes selection sort from other sorting algorithms is th
  Average performance	        O(n log n)
  Worst-case space complexity	О(n) total with O(n) auxiliary, O(1) auxiliary with linked lists
  
- # Binary Searching
+ ## Binary Searching
  In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target
  value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot
  lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target 
