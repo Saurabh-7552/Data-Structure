@@ -22,4 +22,4 @@ When inserting or searching for an element in a binary search tree, the key of e
   Note:
   1. Inorder traversal is always sorted.
   2. To draw a binary tree we need either postorder or preorder traversals.
-  3. Worst case of Insertion and Deletion is O(n).
+  3. Worst case of Insertion and Deletion is of order O(n).
