@@ -119,7 +119,7 @@ public:
 		}
 		return found;
 	}
-	//TODO Deletion, Counting Right-Left node, Mirror of a tree, Height of a tree
+	//TODO Deletion, Mirror of a tree, Height of a tree
 	int count_nodes(My_Node* temp)
 	{
 		int count = 0;
@@ -137,6 +137,38 @@ public:
 	{
 		return count_nodes(temp->left);
 	
+	}
+	void level_Order(My_Node* node, int level)
+	{
+		if (node == NULL)
+		{
+			return;
+		}
+		if (level == 1)
+		{
+			std::cout << node->data<<" ";
+		}
+		level_Order(node->left, level - 1);
+		level_Order(node->right, level - 1);
+	}
+	int height(My_Node* currrent_node)
+	{
+		if (currrent_node == NULL)
+			return 0;
+		int LeftCount =  height(currrent_node->left);
+		int RightCount = height(currrent_node->right);
+		if (LeftCount > RightCount)
+			return LeftCount + 1;
+		else
+			return RightCount + 1;
+	}
+	void AllLevel_Element()
+	{
+		for (int i = 1; i <= this->height(this->get_root()); ++i)
+		{
+			level_Order(this->get_root(), i);
+			std::cout << std::endl;
+		}
 	}
 };
 
