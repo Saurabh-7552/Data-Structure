@@ -119,7 +119,7 @@ public:
 		}
 		return found;
 	}
-	//TODO Deletion, Mirror of a tree, Height of a tree
+	//TODO Deletion, Mirror of a tree
 	int count_nodes(My_Node* temp)
 	{
 		int count = 0;
@@ -170,5 +170,19 @@ public:
 			std::cout << std::endl;
 		}
 	}
+	void mirrorTree(My_Node* node)
+	{
+		if (node == NULL)
+			return;
+		if (node->right == NULL && node->left == NULL)
+			return;
+		mirrorTree(node->left);
+		mirrorTree(node->right);
+		My_Node* temp;
+		temp = node->left;
+		node->left = node->right;
+		node->right = temp;
+	}
+
 };
 
