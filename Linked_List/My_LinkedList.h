@@ -96,7 +96,7 @@ class My_LinkedList
 	void reverse_list()
 	{
 		My_Node* temp = head,*back=NULL,*front=temp->next;
-		while (front != NULL)
+		while (front != NULL)															
 		{
 			temp->next = back;
 			back = temp;
@@ -165,9 +165,9 @@ class My_LinkedList
         }
 
 
-      boolean isloop()
-      {    Node * fast=head;*slow=head;                          ///// FloyD Method
-          while(fast->next!=NULL || fast!=NULL || slow!=NULL)
+      bool isloop()
+      {    My_Node* fast=head,*slow=head;                          ///// FloyD Method
+          while(fast->next!=NULL && fast!=NULL && slow!=NULL)
            {
             fast=fast->next->next;
             slow=slow->next;
@@ -176,7 +176,6 @@ class My_LinkedList
            }
            return false;
        }
-    
 
 };
 
