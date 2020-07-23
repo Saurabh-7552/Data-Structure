@@ -83,7 +83,7 @@ class My_Queue
 		}
 		std::cout << temp->data << std::endl;
 	}
-	/*Recursive method to reverse the Queue*/
+	/*Recursive method to reverse the Queue - it can also done by explicit stacks(as recursion is also a stack implmentation)*/
 	void reverse()
 	{
 		if (isEmpty())
